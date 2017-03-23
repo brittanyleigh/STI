@@ -4,4 +4,4 @@ session_destroy();
 $_SESSION = array();
 var_dump($_SESSION);
 
-include 'home.html';
+include 'index.html';
