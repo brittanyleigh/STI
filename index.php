@@ -1,38 +1,50 @@
-<?php 
+<?php
+session_start();
 
-$user = $_POST["Username"];
+       if(isset($_POST['username']))
+            $_SESSION['username']=$_POST['username'];
 
-setcookie("username", $user);
-$username = $_COOKIE["username"];
+       if(isset($_POST['password']))
+            $_SESSION['password']=$_POST['password'];
 
-$password = $_POST["Password"];
+
+
+$user = $_SESSION['username'];
+$password = $_SESSION['password'];
+
+
 $loggedIn = false;
-
+//var_dump($_SESSION);
+//echo $password;
 
 require 'pdo.php';
 
-
-
+	if(($_POST["Note"])){
+	$note_text = $_POST["Note"];
+	$new_note = $pdo->prepare("INSERT INTO notes (user, note) VALUES (?, ?)");
+	$new_note->execute(array("$user", "$note_text"));
+	header('Refresh: 0');
+}
 
 if($password === $userPw){
 	$loggedIn = true;
+	var_dump($_SESSION);
 	include 'notes.php';
-	//	foreach ($user_notes as $row) {
-	//	echo $row["note"] . "<br/>";
-	//}
+		foreach ($user_notes as $row) {
+		echo $row["note"] . "<br/>";
+	}
+
 	
 
 
-	$note_text = $_POST["Note"];
-	var_dump($_COOKIE["username"]);
-	echo $username;
 	
 
-	if($_POST["Note"]){
-	$new_note = $pdo->prepare("INSERT INTO notes (user, note) VALUES (?, ?)");
-	$new_note->execute(array("$username", "$note_text"));
-	echo $username;
-}
+
+
+	
+
+
+
 
 } else {
 	include 'incorrect.html';

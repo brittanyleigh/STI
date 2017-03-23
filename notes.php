@@ -1,7 +1,4 @@
 
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,8 +15,8 @@
 
 
 
-	<form action="home.html">
-    	<input type="submit" value="Log Out" />
+	<form action="logout.php" method="post">
+    	<input type="submit" name ="logout" value="Log Out" />
 	</form>
 </body>
 </html>
