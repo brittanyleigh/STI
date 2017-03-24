@@ -6,6 +6,7 @@
 	<title>Welcome to Notes!</title>
 </head>
 <body>
+
 	<div class="welcome">
 		<h3>Welcome, <?php echo $user ?>!</h3>
 
@@ -24,10 +25,8 @@
 	</div>
 
 	<div class="user_notes">
-	<h4>Your Notes:</h4>
+		<h4>Your Notes:</h4>
 	</div>
-
-
 
 </body>
 </html>

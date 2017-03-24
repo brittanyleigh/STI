@@ -3,6 +3,8 @@
 	text-align: center;
 	color: #333333;
 }
+
+/* new note entry styles */
 input, textarea {
 	text-align: left;
 }
@@ -14,15 +16,15 @@ textarea {
 }
 .new_note {
 	margin: 0 auto;
-	width: 35%;
-	
+	width: 35%;	
 }
-.submit {
-	text-align: right;
-}
+
+/* logged in header style */
 .welcome h3, .welcome form {
 	display: inline-block;
 }
+
+/* note styles */
 .notes {
 	padding: 10px;
 	border: solid 2px #9EDAC1;
@@ -31,16 +33,20 @@ textarea {
 	margin: 15px auto;
 	background-color: #CAEDD5;
 }
+
+/* button styles */
+.submit {
+	text-align: right;
+}
 input[type=submit] {
-	-webkit-appearance: none;
 	background-color: #ea8c77;
+	border-color: #E7674A;
+	box-shadow: 0px 0px 5px gray;
 	text-align: center;
 	font-size: 16px;
-	padding: 5px 20px;
-	border-color: #E7674A;
-	cursor: pointer;
-	box-shadow: 0px 0px 5px gray;
 	font-weight: bold;
+	padding: 5px 20px;
+	cursor: pointer;
 }
 input[type=submit]:hover {
 	background-color: #E7674A;
