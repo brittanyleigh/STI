@@ -5,7 +5,7 @@
 	<title>Welcome to Notes!</title>
 </head>
 <body>
-	<h3>Hurray!</h3>
+	<h3>Welcome, <?php echo $user ?>!</h3>
 
 	<form action="" method="post">
 		Note: <br>
@@ -13,12 +13,8 @@
 		<input type="submit" value="Submit" name="submit" />
 	</form>
 
-
-
 	<form action="logout.php" method="post">
     	<input type="submit" name ="logout" value="Log Out" />
 	</form>
 </body>
 </html>
-
-
