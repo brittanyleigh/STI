@@ -22,10 +22,14 @@ if(($_POST["Note"])){
 
 if($user && $password === $userPw){
 	include 'notes.php';
-
-	foreach ($user_notes as $row) {
-		echo $row["note"] . "<br/>";
-	}
+		if($user_notes){
+			foreach ($user_notes as $row) {
+				echo "<div class=\"notes\">" . $row["note"] . "</div>";
+			}
+		}
+		else {
+			echo "You don't have any notes yet!";
+		}
 //prevents logged out users from accessing or entering notes
 //displays all user's notes
 

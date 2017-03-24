@@ -2,19 +2,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="style.css">
 	<title>Welcome to Notes!</title>
 </head>
 <body>
-	<h3>Welcome, <?php echo $user ?>!</h3>
+	<div class="welcome">
+		<h3>Welcome, <?php echo $user ?>!</h3>
 
-	<form action="" method="post">
-		Note: <br>
-		<textarea name="Note"> </textarea><br>
-		<input type="submit" value="Submit" name="submit" />
-	</form>
+		<form action="logout.php" method="post" class="logout">
+    		<input type="submit" name ="logout" value="Log Out" />
+		</form>
+	</div>
 
-	<form action="logout.php" method="post">
-    	<input type="submit" name ="logout" value="Log Out" />
-	</form>
+	<div class="new_note">
+		<form action="" method="post">
+			<textarea name="Note" placeholder="Enter New Note"></textarea>
+			<div class="submit">
+				<input type="submit" value="Submit" name="submit" />
+			</div>
+		</form>
+	</div>
+
+	<div class="user_notes">
+	<h4>Your Notes:</h4>
+	</div>
+
+
+
 </body>
 </html>
